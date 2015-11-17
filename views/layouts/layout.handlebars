@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+{{{messages}}}
+	{{#if errors}}
+		{{#each errors}}
+			{{msg}}
+		{{/each}}
+	{{/if}}
+{{{body}}}
+</body>
+</html>
