@@ -1,0 +1,19 @@
+{
+  "name": "UserLoginSystem",
+  "description": "",
+  "main": "bin/www",
+  "authors": [
+    "powolnymarcel <powolnymarcel@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/powolnymarcel/UserLoginSystem",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/lib",
+    "test",
+    "tests"
+  ]
+}
