@@ -1,0 +1,83 @@
+<ul>
+	<li><a class="btn-danger btn btn-lg" ui-sref="contact" 	   ui-sref-active="page-contact"  >contact</a></li>
+	<li><a class="btn-info btn btn-lg" ui-sref="login" 	   ui-sref-active="page-login"  >login</a></li>
+</ul>
+
+
+
+<div class="menubar-hoverable header-fixed">
+
+	<!-- BEGIN LOGIN SECTION -->
+	<section class="section-account">
+		<div class="img-backdrop" style="background-image: url('/images/img16.jpg')"></div>
+		<div class="spacer"></div>
+		<div class="card contain-sm style-transparent">
+			<div class="card-body">
+				<div class="row">
+					<div class="col-sm-6">
+						<br/>
+						<span class="text-lg text-bold text-primary">Inscription</span>
+						<br/><br/>
+						<form class="form floating-label" action="../../html/dashboards/dashboard.html" accept-charset="utf-8" method="post">
+							<div class="form-group">
+								<input type="text" class="form-control" value="" id="pseudo" name="pseudo" autofocus autocomplete="on">
+								<label for="pseudo">Pseudo</label>
+							</div>
+							<div class="form-group">
+								<input type="text" class="form-control" value="" id="nom" name="nom"  autocomplete="on">
+								<label for="nom">Nom</label>
+							</div>
+							<div class="form-group">
+								<input type="email" class="form-control" value="" id="email" name="email"  autocomplete="on">
+								<label for="email">Email</label>
+							</div>
+
+							<div class="form-group">
+								<input type="password" class="form-control" value="" id="password" name="password">
+								<label for="password">Password</label>
+							</div>
+							<div class="form-group">
+								<input type="password" class="form-control" value="" id="confirmer_password" name="confirmer_password">
+								<label for="confirmer_password">Confirmer Password</label>
+							</div>
+							<br/>
+							<div class="row">
+								<div class="col-xs-6 text-left">
+									<div class="checkbox checkbox-inline checkbox-styled">
+										<label>
+										</label>
+									</div>
+								</div><!--end .col -->
+								<div class="col-xs-6 text-right">
+									<button class="btn btn-primary btn-raised" type="submit">Inscription</button>
+								</div><!--end .col -->
+							</div><!--end .row -->
+						</form>
+					</div><!--end .col -->
+					<div class="col-sm-5 col-sm-offset-1 text-center">
+						<br><br>
+						<h3 class="text-light">
+							Se connecter
+						</h3>
+						<a class="btn btn-block btn-raised btn-primary" href="/" ui-sref="login" 	ui-sref-active="page-login">Login</a>
+						<br><br>
+						<h3 class="text-light">
+							or
+						</h3>
+						<p>
+							<a href="#" class="btn btn-block btn-raised btn-info"><i class="fa fa-facebook pull-left"></i>Login with Facebook</a>
+						</p>
+						<p>
+							<a href="#" class="btn btn-block btn-raised btn-info"><i class="fa fa-twitter pull-left"></i>Login with Twitter</a>
+						</p>
+					</div><!--end .col -->
+				</div><!--end .row -->
+			</div><!--end .card-body -->
+		</div><!--end .card -->
+	</section>
+	<!-- END LOGIN SECTION -->
+
+	<!-- BEGIN JAVASCRIPT -->
+
+	<!-- END JAVASCRIPT -->
+</div>

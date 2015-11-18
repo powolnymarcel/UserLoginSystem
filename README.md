@@ -1,5 +1,5 @@
-
-
+<h2>En standby</h2>
+Mise en place d'nimations............
 Pour créer l'app :
 
 Express nomDelApp
