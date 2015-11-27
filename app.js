@@ -11,6 +11,7 @@ var session= require('express-session');
 var passport= require('passport');
 var mongoose= require('mongoose');
 
+require('./config/passport')(passport);
 
 var configDB= require('./config/db.js');
 mongoose.connect(configDB.url);
@@ -80,6 +81,9 @@ app.use(expressValidator({
 		};
 	}
 }));
+
+app.use(passport.initialize());
+app.use(passport.session());
 
 app.use('/', routes);
 app.use('/users', users);

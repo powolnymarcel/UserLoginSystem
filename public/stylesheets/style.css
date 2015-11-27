@@ -5,9 +5,18 @@ html         { overflow-y:hidden; }
 	margin: 0 auto;
 	width: 100%;
 }
+
+li{display: inline}
+@media (max-height: 700px) {
+	section.section-account .img-backdrop,
+	section.section-account .spacer {
+		display:none;
+	}}
+.form-group{
+	color: white;
+}
 .page        {
 	bottom:0;
-	padding-top:82px;
 	position:absolute;
 	text-align:center;
 	top:0;
@@ -22,7 +31,7 @@ html         { overflow-y:hidden; }
 /* PAGES
 ============================================================================= */
 .page-login 		{ background:#00D0BC; color:#00907c; }
-.page-inscription 	{ background:#E59400; color:#a55400; }
+.page-inscription 	{ background:#E59400; color:#a55400; overflow: scroll }
 .page-contact 	{ background:#ffa6bb; color:#9e0000; }
 
 /* ANIMATIONS

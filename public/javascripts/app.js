@@ -22,7 +22,6 @@ app.config(function($stateProvider, $urlRouterProvider,$interpolateProvider) {
 			templateUrl: '/views/page-login.html',
 			controller: 'loginController'
 		})
-
 		.state('inscription', {
 			url: '/inscription',
 			templateUrl: '/views/page-inscription.html',
@@ -50,9 +49,19 @@ app.controller('loginController', function($scope) {
 });
 
 // inscription page controller
-app.controller('inscriptionController', function($scope) {
+app.controller('inscriptionController', function($scope,$http) {
 	//Bind au scope pageClass, ainsi dans la vue on a une class qui prend la valeur de pageClass
 	$scope.pageClass = 'page-inscription';
+
+	$scope.inscription = function(){
+
+		$http.post('/inscription',$scope.utilisateur).success(function(response){
+			console.log('client ajouté!');
+			console.log($scope.utilisateur);
+			console.log(response);
+			$scope.errors= response;
+		})
+	}
 });
 
 // contact page controller
@@ -60,3 +69,30 @@ app.controller('contactController', function($scope) {
 	//Bind au scope pageClass, ainsi dans la vue on a une class qui prend la valeur de pageClass
 	$scope.pageClass = 'page-contact';
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

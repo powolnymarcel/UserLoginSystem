@@ -3,8 +3,6 @@
 	<li><a class="btn-info btn btn-lg" ui-sref="login" 	   ui-sref-active="page-login"  >login</a></li>
 </ul>
 
-
-
 <div class="menubar-hoverable header-fixed">
 
 	<!-- BEGIN LOGIN SECTION -->
@@ -18,28 +16,65 @@
 						<br/>
 						<span class="text-lg text-bold text-primary">Inscription</span>
 						<br/><br/>
-						<form class="form floating-label" action="../../html/dashboards/dashboard.html" accept-charset="utf-8" method="post">
+
+
+						<form class="form floating-label" ng-submit="inscription()" accept-charset="utf-8" method="post">
+							<div ng-repeat="erreur in errors">
+								<div ng-repeat="err in erreur">
+									<div class="alert alert-danger" ng-if="err.param === 'pseudo'">{[{err.msg}]}<br></div>
+								</div>
+							</div>
 							<div class="form-group">
-								<input type="text" class="form-control" value="" id="pseudo" name="pseudo" autofocus autocomplete="on">
+								<input type="text" class="form-control" ng-model="utilisateur.pseudo" value="" id="pseudo" name="pseudo" autofocus autocomplete="on">
 								<label for="pseudo">Pseudo</label>
 							</div>
-							<div class="form-group">
-								<input type="text" class="form-control" value="" id="nom" name="nom"  autocomplete="on">
-								<label for="nom">Nom</label>
+
+
+							<div ng-repeat="erreur in errors">
+								<div ng-repeat="err in erreur">
+									<div class="alert alert-danger" ng-if="err.param === 'nom'">{[{err.msg}]}<br></div>
+								</div>
 							</div>
 							<div class="form-group">
-								<input type="email" class="form-control" value="" id="email" name="email"  autocomplete="on">
+								<input type="text" class="form-control" value="" ng-model="utilisateur.nom" id="nom" name="nom"  autocomplete="on">
+								<label for="nom">Nom</label>
+							</div>
+
+
+
+							<div ng-repeat="erreur in errors">
+								<div ng-repeat="err in erreur">
+									<div class="alert alert-danger" ng-if="err.param === 'email'">{[{err.msg}]}<br></div>
+								</div>
+							</div>
+							<div class="form-group">
+								<input type="email" class="form-control" value="" ng-model="utilisateur.email" id="email" name="email"  autocomplete="on">
 								<label for="email">Email</label>
 							</div>
 
+
+
+							<div ng-repeat="erreur in errors">
+								<div ng-repeat="err in erreur">
+									<div class="alert alert-danger" ng-if="err.param === 'password'">{[{err.msg}]}<br></div>
+								</div>
+							</div>
 							<div class="form-group">
-								<input type="password" class="form-control" value="" id="password" name="password">
+								<input type="password" class="form-control" value="" ng-model="utilisateur.password" id="password" name="password">
 								<label for="password">Password</label>
 							</div>
+
+							<div ng-repeat="erreur in errors">
+								<div ng-repeat="err in erreur">
+									<div class="alert alert-danger" ng-if="err.param === 'confirmer_password'">{[{err.msg}]}<br></div>
+								</div>
+							</div>
 							<div class="form-group">
-								<input type="password" class="form-control" value="" id="confirmer_password" name="confirmer_password">
+								<input type="password" class="form-control" value="" ng-model="utilisateur.confirmer_password" id="confirmer_password" name="confirmer_password">
 								<label for="confirmer_password">Confirmer Password</label>
 							</div>
+
+
 							<br/>
 							<div class="row">
 								<div class="col-xs-6 text-left">
